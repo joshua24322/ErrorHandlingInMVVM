@@ -13,6 +13,11 @@
 		A54A764A24CC6C58004025FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54A764824CC6C58004025FE /* Main.storyboard */; };
 		A54A764C24CC6C5B004025FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54A764B24CC6C5B004025FE /* Assets.xcassets */; };
 		A54A764F24CC6C5B004025FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54A764D24CC6C5B004025FE /* LaunchScreen.storyboard */; };
+		A54A765824CC72F2004025FE /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A765724CC72F2004025FE /* Factory.swift */; };
+		A54A765A24CC7573004025FE /* DataRepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A765924CC7573004025FE /* DataRepositoryManager.swift */; };
+		A54A765D24CC7700004025FE /* MockParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A765C24CC7700004025FE /* MockParameter.swift */; };
+		A54A766024CC7A67004025FE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A765F24CC7A67004025FE /* Bindable.swift */; };
+		A54A766424CC7ACB004025FE /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A766324CC7ACB004025FE /* MockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A54A764B24CC6C5B004025FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A54A764E24CC6C5B004025FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54A765024CC6C5B004025FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54A765724CC72F2004025FE /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		A54A765924CC7573004025FE /* DataRepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepositoryManager.swift; sourceTree = "<group>"; };
+		A54A765C24CC7700004025FE /* MockParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockParameter.swift; sourceTree = "<group>"; };
+		A54A765F24CC7A67004025FE /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		A54A766324CC7ACB004025FE /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		A54A764124CC6C58004025FE /* ErrorHandlingInMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				A54A766524CC7E54004025FE /* View */,
+				A54A766124CC7A98004025FE /* ViewModel */,
+				A54A765E24CC7A26004025FE /* Utilities */,
+				A54A765624CC72C9004025FE /* Model */,
 				A54A764224CC6C58004025FE /* AppDelegate.swift */,
 				A54A764424CC6C58004025FE /* SceneDelegate.swift */,
-				A54A764624CC6C58004025FE /* ViewController.swift */,
 				A54A764824CC6C58004025FE /* Main.storyboard */,
 				A54A764B24CC6C5B004025FE /* Assets.xcassets */,
 				A54A764D24CC6C5B004025FE /* LaunchScreen.storyboard */,
 				A54A765024CC6C5B004025FE /* Info.plist */,
 			);
 			path = ErrorHandlingInMVVM;
+			sourceTree = "<group>";
+		};
+		A54A765624CC72C9004025FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A54A766224CC7AAA004025FE /* Interactor */,
+				A54A765B24CC76EF004025FE /* Entity */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A54A765B24CC76EF004025FE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A54A765C24CC7700004025FE /* MockParameter.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A54A765E24CC7A26004025FE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A54A765F24CC7A67004025FE /* Bindable.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A54A766124CC7A98004025FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A54A766324CC7ACB004025FE /* MockViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A54A766224CC7AAA004025FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A54A765724CC72F2004025FE /* Factory.swift */,
+				A54A765924CC7573004025FE /* DataRepositoryManager.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A54A766524CC7E54004025FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A54A764624CC6C58004025FE /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54A765824CC72F2004025FE /* Factory.swift in Sources */,
+				A54A766024CC7A67004025FE /* Bindable.swift in Sources */,
 				A54A764724CC6C58004025FE /* ViewController.swift in Sources */,
 				A54A764324CC6C58004025FE /* AppDelegate.swift in Sources */,
+				A54A765D24CC7700004025FE /* MockParameter.swift in Sources */,
+				A54A765A24CC7573004025FE /* DataRepositoryManager.swift in Sources */,
+				A54A766424CC7ACB004025FE /* MockViewModel.swift in Sources */,
 				A54A764524CC6C58004025FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
