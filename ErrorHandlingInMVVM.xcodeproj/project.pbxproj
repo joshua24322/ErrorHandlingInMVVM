@@ -18,6 +18,7 @@
 		A54A765D24CC7700004025FE /* MockParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A765C24CC7700004025FE /* MockParameter.swift */; };
 		A54A766024CC7A67004025FE /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A765F24CC7A67004025FE /* Bindable.swift */; };
 		A54A766424CC7ACB004025FE /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A766324CC7ACB004025FE /* MockViewModel.swift */; };
+		A54A766824CC9F77004025FE /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54A766724CC9F77004025FE /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A54A765C24CC7700004025FE /* MockParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockParameter.swift; sourceTree = "<group>"; };
 		A54A765F24CC7A67004025FE /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		A54A766324CC7ACB004025FE /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
+		A54A766724CC9F77004025FE /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		A54A765624CC72C9004025FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A54A766624CC9E90004025FE /* Exception */,
 				A54A766224CC7AAA004025FE /* Interactor */,
 				A54A765B24CC76EF004025FE /* Entity */,
 			);
@@ -128,6 +131,14 @@
 				A54A764624CC6C58004025FE /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A54A766624CC9E90004025FE /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				A54A766724CC9F77004025FE /* ErrorHandling.swift */,
+			);
+			path = Exception;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54A766824CC9F77004025FE /* ErrorHandling.swift in Sources */,
 				A54A765824CC72F2004025FE /* Factory.swift in Sources */,
 				A54A766024CC7A67004025FE /* Bindable.swift in Sources */,
 				A54A764724CC6C58004025FE /* ViewController.swift in Sources */,

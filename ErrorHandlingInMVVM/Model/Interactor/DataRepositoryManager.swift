@@ -8,17 +8,6 @@
 
 import Foundation
 
-enum MockServicesError: Error {
-    /// MockService response object with error
-    case mockServiceResponseError(message: String)
-    /// Server response object is nil
-    case withoutResponseObject
-    /// Fatel Error with message
-    case fatelErrorWith(message: String)
-    /// Fatel Error
-    case fatelError
-}
-
 protocol DataRepositoryProtocol {
     func queryMockServices(_ parameter: MockParameter?, completion: @escaping((Result<String?, MockServicesError>) -> ()))
 }
