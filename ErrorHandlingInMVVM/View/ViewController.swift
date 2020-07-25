@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     // MARK: - Property
     
-    var mockLabel: UILabel! // assume the label promise has value
+    @IBOutlet weak var mockLabel: UILabel!
     
     var parameter: MockParameter?
     
@@ -20,19 +20,28 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        triggerMockService()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupBinding()
     }
 
     // MARK: - Private Method
     
     private func setupBinding() {
-        viewModel.viewElement.bindDidSetObservers { (successfulText) in
+        viewModel.viewElement.bindDidSetObservers { [weak self] (successfulText) in
             self?.mockLabel.text = successfulText
         }
         
-        viewModel.errorMessage.bindDidSetObservers { (errMessage) in
+        viewModel.errorMessage.bindDidSetObservers { [weak self] (errMessage) in
             self?.mockLabel.text = errMessage
         }
+    }
+    
+    private func triggerMockService() {
+        self.viewModel.invokeMockService(self.parameter)
     }
 
 }

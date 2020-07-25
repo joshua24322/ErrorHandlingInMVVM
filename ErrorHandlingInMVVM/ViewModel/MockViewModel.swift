@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  MockViewModel.swift
 //  ErrorHandlingInMVVM
 //
 //  Created by 金融研發一部-張書彬 on 2020/7/25.
